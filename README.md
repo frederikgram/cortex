@@ -4,6 +4,7 @@ itself, this is especially true in the age of Adblockers, now making many tradit
 advertisements partly obsolete. Cortex uses various computer vision approaches to analyze videos and livestreams from platforms such as YouTube and Twitch.tv, giving advertisers insight
 into how much screen-time their advertisements are actually visible to viewers. 
 
-![](/repository/assets/employee.png?raw=true "Employee Data title")
-
+## Examples
 ![](root_example.png?raw=true)
+![](betway_example.png?raw=true)
+
