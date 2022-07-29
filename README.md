@@ -1,4 +1,4 @@
-# cortex
+# cortex | Create Insights for Advertisement Impressions
 WIP
 
 Digital content such as videos has become one of the primary marketing platforms, in this space, advertisements have quickly become an ingrained part of content
