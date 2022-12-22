@@ -1,11 +1,13 @@
-FROM python:3.9
+FROM python
 
-WORKDIR /code
+RUN export PYTHONPATH=$PWD
 
-RUN apt-get update && apt-get install -y python3-opencv
-COPY ./requirements.txt /code/requirements.txt
+EXPOSE 5000
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+COPY . /app
+WORKDIR /app
 
-COPY . /code/app
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
+CMD ["python", "main.py"]
