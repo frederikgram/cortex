@@ -1,4 +1,4 @@
-""" Detection models API """
+""" Detection models for Response and Payload """
 
 from pydantic import BaseModel
 from typing import List

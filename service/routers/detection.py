@@ -18,9 +18,9 @@ from typing import List
 from fastapi import APIRouter, Body, Depends, HTTPException, Request, status
 
 # Logic
-from service.logic.detect import detect
+from logic.detect import detect
 # Models
-from service.models.detection_models import DetectionPayload, DetectionResponse
+from models.detection_models import DetectionPayload, DetectionResponse
 
 router: APIRouter = APIRouter()
 

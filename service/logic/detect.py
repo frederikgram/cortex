@@ -1,7 +1,7 @@
 """ Middleware for detecting the template in the frame """
 
 import numpy as np
-from service.logic.sift import analyze_frame
+from logic.sift import analyze_frame
 
 
 def detect(frame: np.array, template: np.array, threshold: np.array):

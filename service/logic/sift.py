@@ -4,6 +4,22 @@ import cv2 as cv2
 
 
 def analyze_frame(frame, template, threshold=0.1):
+    """ Attempts to perform sub-image template matching on the frame and template using the Scale-Invariant Feature Transform (SIFT) algorithm.
+    
+    Args:
+        frame (str): The frame to analyze.
+        template (str): The template to search for in the frame.
+        threshold (float): The threshold for the number of matches to be considered a match.
+
+    Returns:
+        List[dict]: A list of bounding boxes and confidence scores for each match.
+
+    """
+
+    # @TODO Add support for multiple templates and multiple frames
+    # @TODO Add support for multiple bounding boxes per match
+    # @TODO This could be optimized alot
+
     img1 = template
     img2 = frame
 
