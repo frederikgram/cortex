@@ -14,3 +14,16 @@ def detect(frame: np.array, template: np.array, threshold: np.array):
         raise general_exception
 
     return result
+
+def batch_detect(frames: np.array, template: np.array, threshold: np.array):
+    """Detects the template in the frames"""
+
+    try:
+        results = []
+        for frame in frames:
+            results.append(analyze_frame(frame, template, threshold))
+    except Exception as general_exception:
+        print(general_exception)
+        raise general_exception
+
+    return results

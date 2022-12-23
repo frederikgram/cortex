@@ -16,3 +16,15 @@ class DetectionPayload(BaseModel):
     frame: str
     template: str
     threshold: float
+
+class DetectionBatchPayload(BaseModel):
+    """Payload batch model for the detection API"""
+
+    frames: List[str]
+    template: str
+    threshold: float
+
+class DetectionBatchResponse(BaseModel):
+    """Response batch model for the detection API"""
+
+    matches: List[List[dict]]

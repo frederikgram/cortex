@@ -2,17 +2,11 @@
 
 
 from fastapi import FastAPI
-from routers import detection_router
+from routers import fetch_router
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-app.include_router(detection_router, prefix="/api/v1/detection")
-
-
-
-# This is the entrypoint for the application
-app.get("/")(lambda: {"message": "Hello World"})
-
+app.include_router(fetch_router, prefix="/api/v1")
 
 # CHANGE FOR PRODUCTION
 origins = [
