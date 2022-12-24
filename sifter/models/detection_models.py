@@ -1,13 +1,16 @@
 """ Detection models for Response and Payload """
 
 from pydantic import BaseModel
-from typing import List
+from typing import List, Dict
 
 
 class DetectionResponse(BaseModel):
-    """Response model for the detection API"""
-
-    matches: List[dict]
+    """ Response model for the detection API"""
+    
+    bounding_box: Dict[str, int]
+    confidence: float
+    num_matches: int
+    num_good_matches: int
 
 
 class DetectionPayload(BaseModel):
@@ -25,6 +28,4 @@ class DetectionBatchPayload(BaseModel):
     threshold: float
 
 class DetectionBatchResponse(BaseModel):
-    """Response batch model for the detection API"""
-
-    matches: List[List[dict]]
+    matches: List[DetectionResponse]
